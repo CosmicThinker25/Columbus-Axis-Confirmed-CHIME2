@@ -1,99 +1,111 @@
+
 # Columbus Rotational Scan Data — CHIME/FRB Catalog 2
 
-## Overview
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18286776.svg)](https://doi.org/10.5281/zenodo.18286776)
+[![Science](https://img.shields.io/badge/Science-Open_Access-green.svg)](https://github.com/CosmicThinker25/Columbus-Axis-Confirmed-CHIME2)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+## 🌌 Overview
 
 This repository contains the full reproducible workflow and data products for the paper:
 
-**“Independent Confirmation of the Columbus Axis Using CHIME/FRB Catalog 2”**  
-Zenodo DOI: https://doi.org/10.5281/zenodo.18286776
+> **“Independent Confirmation of the Columbus Axis Using CHIME/FRB Catalog 2”**
 
 This work represents the third stage in a research program exploring weak directional structure in cosmological observables around a theoretically motivated CPT-symmetric axis — the **Siamese Axis**. After two previous detections using FRB–QSO correlations (v1.3) and CHIME/FRB Catalog 1 (v1.7), this repository provides an **independent confirmation** using **CHIME/FRB Catalog 2**, a larger and more heterogeneous dataset.
 
-Using the **Columbus Rotational Scan**, a rotational hemispheric test developed in earlier studies, we detect a clean and reproducible sinusoidal modulation in FRB dispersion measures ΔDM(ψ), with:
+Using the **Columbus Rotational Scan**, a rotational hemispheric test developed in earlier studies, we detect a clean and reproducible sinusoidal modulation in FRB dispersion measures $\Delta DM(\psi)$, with:
 
-- **R² = 0.87**  
-- **Effective amplitude A ≈ 56.7 pc cm⁻³**  
-- **Phase φ₀ ≈ 133.6°**, matching Catalog 1 and FRB–QSO results  
-- **Permutation test output included**
+* **$R^2 = 0.87$** (High quality fit)
+* **Effective amplitude $A \approx 56.7$ pc cm⁻³**
+* **Phase $\phi_0 \approx 133.6^\circ$**, matching Catalog 1 and FRB–QSO results
+* **Permutation test output included**
 
 The stability of the *phase* across three independent analyses strongly suggests the presence of a real, narrow-band directional structure in the sky.
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 
-## How to Reproduce the Analysis
+The project is organized as follows:
 
-1. **Create the project folder structure**, for example:
-chime2/
-data/
-src/
-figs/
+```text
+.
+├── data/
+│   ├── chime2_columbus_scan.csv       # Output: Scan results
+│   ├── chime2_sinefit_summary.json    # Output: Fit parameters
+│   └── chime2_perm_amplitudes.npy     # Output: Permutation test data
+├── src/
+│   └── analysis.py                    # Main analysis script
+├── figs/
+│   └── (Generated figures will appear here)
 
-*(The catalog cannot be redistributed and must be downloaded manually.)*
+Note: The original CHIME/FRB Catalog 2 file (chimefrbcat2.csv) cannot be redistributed here due to size/license and must be downloaded manually (see instructions below).
 
-Place the analysis script in:chime2/src/analysis.py
+How to Reproduce the Analysis
 
-Open **PowerShell** inside the `chime2` directory and install the required Python packages:
+Follow these steps to replicate the findings on your local machine.
+1. Environment Setup
 
-```powershell
+Open your terminal (PowerShell or Bash) and install the required scientific libraries:
+
 pip install numpy pandas matplotlib scipy
+
+2. Prepare the Data
+
+Since the catalog file is external, you must:
+
+    Download the CHIME/FRB Catalog 2 (CSV format) from the official website.
+
+    Place the file chimefrbcat2.csv inside the data/ folder.
+
+3. Run the Columbus Scan
+
+Execute the main script from the project root:
+
+python src/analysis.py
+
+4. What Happens Next?
 
 The script will automatically:
 
-load the catalog from data/
+    Load the catalog from data/.
 
-apply extragalactic filters (|b| > 20°, DM > 800)
+    Apply extragalactic filters (∣b∣>20∘, DM>800).
 
-compute the rotational angle φ around the Siamese Axis
+    Compute the rotational angle ψ around the Siamese Axis.
 
-perform the Columbus Rotational Scan (Mode B)
+    Perform the Columbus Rotational Scan (Mode B).
 
-generate figures into figs/
+    Generate figures in figs/ and numerical results in data/.
 
-generate numerical results into data/
+Scientific Context and Interpretation
 
-After execution, you will find:
+The Columbus Rotational Scan performed on CHIME/FRB Catalog 2 builds upon two previous studies:
 
-chime2/data/chime2_columbus_scan.csv
+    Testing CPT-Symmetric Siamese Universes through FRB–QSO Sky Correlations (v1.3)
 
-chime2/data/chime2_sinefit_summary.json
+    Rotational Hemispheric Test around a Siamese CPT-Symmetric Axis (v1.7)
 
-chime2/data/chime2_perm_amplitudes.npy
-
-all figures in chime2/figs/
-
-
-## Scientific Context and Interpretation
-
-The Columbus Rotational Scan performed on CHIME/FRB Catalog 2 builds upon two previous studies:  
-(1) *Testing CPT-Symmetric Siamese Universes through FRB–QSO Sky Correlations* (v1.3), and  
-(2) *Rotational Hemispheric Test around a Siamese CPT-Symmetric Axis* (v1.7).  
 Together, these works form a consistent sequence of independent analyses pointing toward the same preferred direction in the sky.
+The Theoretical Framework
 
-In the Siamese Cosmology framework, this directional structure is interpreted as the observational imprint of a phase-desynchronization mechanism Δφ(a) between two CPT-reflected cosmic sectors. The model predicts that such a mechanism should manifest not as a simple dipole, but as a **rotational (azimuthal) modulation** around a fixed axis at approximately (RA ≈ 170°, Dec ≈ 40°).
+In the Siamese Cosmology framework, this directional structure is interpreted as the observational imprint of a phase-desynchronization mechanism Δϕ(a) between two CPT-reflected cosmic sectors. The model predicts that such a mechanism should manifest not as a simple dipole, but as a rotational (azimuthal) modulation around a fixed axis at approximately (RA≈170∘, Dec≈40∘).
+Consistency of Results
 
-The results from CHIME/FRB Catalog 2 — specifically the sinusoidal ΔDM(ψ) modulation with phase φ₀ ≈ 133.6° and a high-quality fit (R² ≈ 0.87) — are **consistent with this theoretical prediction**. Importantly, the recovered phase aligns closely with the values obtained from both the FRB–QSO correlation study and CHIME/FRB Catalog 1.
+The results from CHIME/FRB Catalog 2 — specifically the sinusoidal ΔDM(ψ) modulation with phase ϕ0​≈133.6∘ and a high-quality fit (R2≈0.87) — are consistent with this theoretical prediction. Importantly, the recovered phase aligns closely with the values obtained from both the FRB–QSO correlation study and CHIME/FRB Catalog 1.
 
-While the Columbus Scan confirms the **phenomenon** (a stable, reproducible azimuthal anisotropy), the underlying **cause** — phase desynchronization — remains an interpretative element of the theoretical framework. Future datasets (CHIME/FRB Catalog 3, DSA-2000, SKA) will be required to test the mechanism more directly.
+While the Columbus Scan confirms the phenomenon (a stable, reproducible azimuthal anisotropy), the underlying cause — phase desynchronization — remains an interpretative element of the theoretical framework. Future datasets (CHIME/FRB Catalog 3, DSA-2000, SKA) will be required to test the mechanism more directly.
 
-In summary, the Siamese Cosmology framework gains **empirical support** from the directional consistency observed across three independent analyses, but the physical origin of the anisotropy remains an open and testable question.
+Why the Columbus Scan Detects an Azimuthal Signal
 
-## Why the Columbus Scan Detects an Azimuthal Signal (and Not a Dipole)
+The anisotropy revealed by the Columbus Rotational Scan is not expected to appear as a classical dipole. In the Siamese Cosmology framework, the predicted imprint is not a surplus of matter or energy along a single direction, but a phase-dependent modulation around a fixed axis.
 
-The anisotropy revealed by the Columbus Rotational Scan is not expected to appear as a classical dipole. In the Siamese Cosmology framework, the predicted imprint is not a surplus of matter or energy along a single direction, but a **phase-dependent modulation around a fixed axis**. 
+A phase–desynchronization Δϕ(a) between the two CPT-related cosmic sectors generates a rotational contrast, not a polar gradient. As a consequence, the measurable quantity is the azimuthal variation of DM when rotating a hemispheric divider around the axis. This produces a sinusoidal dependence:
+Δ⟨DM⟩(ψ)∝sin(ψ−ϕ0​)
 
-A phase–desynchronization Δφ(a) between the two CPT-related cosmic sectors generates a *rotational contrast*, not a polar gradient. As a consequence, the measurable quantity is the **azimuthal variation** of DM when rotating a hemispheric divider around the axis. This produces a sinusoidal dependence,
+This is exactly the form recovered in the Columbus Scan.
 
-\[
-\Delta \langle \mathrm{DM} \rangle(\psi) \propto 
-\sin(\psi - \phi_0),
-\]
+The fact that Mode A (standard dipole test) remains null, while Mode B shows a clean sinusoid with a stable phase ϕ0​ across independent datasets, is precisely the geometric signature expected from this mechanism.
 
-exactly as recovered in the Columbus Scan.  
-The fact that Mode A (standard dipole test) remains null, while Mode B shows a clean sinusoid with a stable phase φ₀ across independent datasets (FRB–QSO, CHIME/FRB Catalog 1, and Catalog 2), is precisely the geometric signature expected from this mechanism.
-
-In short: the Columbus-axis modulation is **rotational**, not dipolar.  
-This explains why its phase is stable and why the sinusoidal pattern persists regardless of catalog heterogeneity.
-
-
+In short: the Columbus-axis modulation is rotational, not dipolar. This explains why its phase is stable and why the sinusoidal pattern persists regardless of catalog heterogeneity.
