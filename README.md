@@ -64,4 +64,18 @@ chime2/data/chime2_perm_amplitudes.npy
 all figures in chime2/figs/
 
 
+## Scientific Context and Interpretation
+
+The Columbus Rotational Scan performed on CHIME/FRB Catalog 2 builds upon two previous studies:  
+(1) *Testing CPT-Symmetric Siamese Universes through FRB–QSO Sky Correlations* (v1.3), and  
+(2) *Rotational Hemispheric Test around a Siamese CPT-Symmetric Axis* (v1.7).  
+Together, these works form a consistent sequence of independent analyses pointing toward the same preferred direction in the sky.
+
+In the Siamese Cosmology framework, this directional structure is interpreted as the observational imprint of a phase-desynchronization mechanism Δφ(a) between two CPT-reflected cosmic sectors. The model predicts that such a mechanism should manifest not as a simple dipole, but as a **rotational (azimuthal) modulation** around a fixed axis at approximately (RA ≈ 170°, Dec ≈ 40°).
+
+The results from CHIME/FRB Catalog 2 — specifically the sinusoidal ΔDM(ψ) modulation with phase φ₀ ≈ 133.6° and a high-quality fit (R² ≈ 0.87) — are **consistent with this theoretical prediction**. Importantly, the recovered phase aligns closely with the values obtained from both the FRB–QSO correlation study and CHIME/FRB Catalog 1.
+
+While the Columbus Scan confirms the **phenomenon** (a stable, reproducible azimuthal anisotropy), the underlying **cause** — phase desynchronization — remains an interpretative element of the theoretical framework. Future datasets (CHIME/FRB Catalog 3, DSA-2000, SKA) will be required to test the mechanism more directly.
+
+In summary, the Siamese Cosmology framework gains **empirical support** from the directional consistency observed across three independent analyses, but the physical origin of the anisotropy remains an open and testable question.
 
