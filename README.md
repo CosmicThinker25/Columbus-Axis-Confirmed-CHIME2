@@ -79,3 +79,21 @@ While the Columbus Scan confirms the **phenomenon** (a stable, reproducible azim
 
 In summary, the Siamese Cosmology framework gains **empirical support** from the directional consistency observed across three independent analyses, but the physical origin of the anisotropy remains an open and testable question.
 
+## Why the Columbus Scan Detects an Azimuthal Signal (and Not a Dipole)
+
+The anisotropy revealed by the Columbus Rotational Scan is not expected to appear as a classical dipole. In the Siamese Cosmology framework, the predicted imprint is not a surplus of matter or energy along a single direction, but a **phase-dependent modulation around a fixed axis**. 
+
+A phase–desynchronization Δφ(a) between the two CPT-related cosmic sectors generates a *rotational contrast*, not a polar gradient. As a consequence, the measurable quantity is the **azimuthal variation** of DM when rotating a hemispheric divider around the axis. This produces a sinusoidal dependence,
+
+\[
+\Delta \langle \mathrm{DM} \rangle(\psi) \propto 
+\sin(\psi - \phi_0),
+\]
+
+exactly as recovered in the Columbus Scan.  
+The fact that Mode A (standard dipole test) remains null, while Mode B shows a clean sinusoid with a stable phase φ₀ across independent datasets (FRB–QSO, CHIME/FRB Catalog 1, and Catalog 2), is precisely the geometric signature expected from this mechanism.
+
+In short: the Columbus-axis modulation is **rotational**, not dipolar.  
+This explains why its phase is stable and why the sinusoidal pattern persists regardless of catalog heterogeneity.
+
+
