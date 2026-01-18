@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-01-18T04:32:20.268616Z",
+  "catalog": "CHIME/FRB Catalog 2",
+  "input_csv": "C:\\Users\\Azul\\Desktop\\chime 2\\data\\chimefrbcat2.csv",
+  "filters": {
+    "min_abs_b_deg": 20.0,
+    "min_dm": 800.0
+  },
+  "siamese_axis": {
+    "ra_deg": 170.0,
+    "dec_deg": 40.0
+  },
+  "scan": {
+    "step_deg": 1.0,
+    "n_points": 360
+  },
+  "fit_params": {
+    "B": -39.09365716164829,
+    "D": 41.09939340594709,
+    "C": 0.0,
+    "A_eff": 56.72278350547778,
+    "phi0_deg": 133.5672540657806,
+    "R2": 0.8710527925957778
+  },
+  "permutation_test": {
+    "n_permutations": 1000,
+    "A_data_abs": 56.72278350547778,
+    "p_perm_absA": 0.172
+  }
+}
